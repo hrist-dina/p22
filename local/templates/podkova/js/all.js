@@ -1319,7 +1319,7 @@ $("form[name=oneclickbasketcredit]").on("submit", function() {
         }), $(".rating-e").each(function() {
             for (var i = 1; i <= 5; i++) $(this).append("<span></span>");
             for (var j = 1; j <= eval($(this).attr("data-current")); j++) $(this).find("span:nth-child(" + j + ")").addClass("active")
-        }), $(".card-b .core .quantity").each(function() {
+        }), $(".price-buttons .quantity").each(function() {
             for (var i = 1; i <= 5; i++) $(this).append("<em></em>");
             for (var j = 1; j <= eval($(this).attr("data-current")); j++) $(this).find("em:nth-child(" + j + ")").addClass("active")
         }), $(".card-b .gallery, .new-e .gallery").each(function() {
@@ -1581,7 +1581,7 @@ $("form[name=oneclickbasketcredit]").on("submit", function() {
             })
         }), $(".nav-inner .type, .nav-inner .sort").each(function() {
             $(this).before('<h6 class="drop"><span>' + $(this).find(".active").text() + "</span></h6>")
-        }), $(".card-b .lc .group").detach().insertAfter(".card-b .tabs"), $(".card-b .core > div").detach().insertBefore(".card-b .core .desc"), $(".card-b .tabs .nav").before('<h6 class="drop"><span>' + $(".card-b .tabs .nav .active").text() + "</span></h6>"), $(".nav-inner .drop, .card-b .tabs h6.drop").on("click", function() {
+        }), $(".card-b .lc .group").detach().insertAfter(".card-b .tabs"), $(".card-b .price-buttons").detach().insertBefore(".card-b .core .desc"), $(".card-b .tabs .nav").before('<h6 class="drop"><span>' + $(".card-b .tabs .nav .active").text() + "</span></h6>"), $(".nav-inner .drop, .card-b .tabs h6.drop").on("click", function() {
             $(this).next().toggleClass("dropped"), $(this).toggleClass("active")
         }), $(".custom-catalog .list li h3").on("click", function(e) {
             e.preventDefault(), $(this).closest("li").toggleClass("active")
@@ -1591,7 +1591,7 @@ $("form[name=oneclickbasketcredit]").on("submit", function() {
             $(this).find("input").length ? $(this).prepend("<strong>" + $(this).parents("table").find("th").eq($(this).index()).text() + "</strong>") : $(this).hide()
         })) : ($(".nav.prod-tabs-one a").each(function() {
             "АКБ" == $(this).text() && $(this).text("Аккумуляторы")
-        }), $(".menu-open, header .logo-m, .auto-type-nav-select, .multiply h6, .selection-i .more, .description-b .more, footer .go-up, .lk-nav .drop, .order-table table td label, .order-table table label, .card-b .tabs h6.drop, .calculator-intro table td strong, .calc-result table td strong").remove(), $(".selection-i").detach().insertAfter(".sign-i"), $(".selection-i .title").detach().insertAfter(".selection-i .nav"), $(".selection-i .clear").detach().insertBefore(".selection-i .controls button"), $(".leader-n .recommend").detach().insertBefore(".leader-n .count"), $(".card-b .lc .group").detach().insertAfter(".card-b .gallery"), $(".card-b .core > div").detach().insertAfter(".card-b .core .desc")))
+        }), $(".menu-open, header .logo-m, .auto-type-nav-select, .multiply h6, .selection-i .more, .description-b .more, footer .go-up, .lk-nav .drop, .order-table table td label, .order-table table label, .card-b .tabs h6.drop, .calculator-intro table td strong, .calc-result table td strong").remove(), $(".selection-i").detach().insertAfter(".sign-i"), $(".selection-i .title").detach().insertAfter(".selection-i .nav"), $(".selection-i .clear").detach().insertBefore(".selection-i .controls button"), $(".leader-n .recommend").detach().insertBefore(".leader-n .count"), $(".card-b .lc .group").detach().insertAfter(".card-b .gallery"), $(".card-b .price-buttons").detach().appendTo(".price-buttons__wrapper")))
     }), $(window).trigger("resize"), $(".wholesale-b .programs .brands").slick({
         slidesToShow: 4,
         slidesToScroll: 1,
