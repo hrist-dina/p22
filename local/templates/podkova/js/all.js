@@ -2429,4 +2429,11 @@ $(function () {
     	$('[name=moneycare]').find('[name=prod]').val(name);
     	$('[name=moneycare]').find('[name=prod-p]').val(price);
     });
+
+    $('.js-quantity-plus').on('click', function() {
+        $(this).parent().siblings('.js-quantity-input')[0].stepUp();
+    });
+    $('.js-quantity-minus').on('click', function() {
+        $(this).parent().siblings('.js-quantity-input')[0].stepDown();
+    });
 });

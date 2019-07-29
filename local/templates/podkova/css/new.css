@@ -452,10 +452,77 @@ position: absolute;
 .price-buttons .quantity-input {
     display: inline-block;
     vertical-align: middle;
-    width: 67px !important;
+    width: 47px !important;
     height: 40px;
     margin-left: 20px;
+    padding-left: 8px !important;
+    
 }
+
+.price-buttons input.quantity-input::-webkit-outer-spin-button,
+.price-buttons input.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.price-buttons input.quantity-input[type=number] {
+    -moz-appearance:textfield;
+}
+
+.quantity-input__wrapper {
+    font-size: 0;
+    display: inline-block;
+}
+
+.quantity-input__controls {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #A9A8A8;
+    border-left: none;
+    box-sizing: border-box;
+}
+
+
+
+.quantity-input__plus,
+.quantity-input__minus {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.quantity-input__plus::before,
+.quantity-input__minus::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 10px;
+    height: 2px;
+    background: #222222;
+}
+.quantity-input__plus::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 2px;
+    height: 10px;
+    background: #222222;
+}
+
+
 
 .price-buttons .button-buy {
     max-width: 290px;
@@ -659,7 +726,7 @@ position: absolute;
         left: -20px;
     }
     .price-buttons .quantity-input {
-        height: auto;
+        /* height: auto; */
     }
 
     .card-b .core .controls {
@@ -674,6 +741,7 @@ position: absolute;
 
     .card-b .price-buttons .price {
         font-size: 32px;
+        line-height: 32px;
         margin-left: 0;
     }
     .card-b .price-buttons div.checker, 
